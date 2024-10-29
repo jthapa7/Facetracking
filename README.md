@@ -11,4 +11,23 @@ This project uses a Raspberry Pi and two servo motors to create a face-tracking 
 ## Hardware Requirements
 - Raspberry Pi 4 (or other compatible model)
 - USB camera or Raspberry Pi camera module (for this project I have used a Logi tech USB Camera)
-- 2 Servo motors (for this project I have used Hitec HS-645MG Ultra Torque Servo) for Pan Tilt 
+- 2 Servo motors (for this project I have used Hitec HS-645MG Ultra Torque Servo) for Pan Tilt
+
+## Install Required Packages
+```
+# Install pigpio for servo control
+sudo apt update
+sudo apt install pigpio python3-pigpio
+
+# Install OpenCV for face detection
+pip install opencv-python opencv-python-headless
+```
+## Setup Pigpio Daemon
+Start ```pigpiod ``` daemon for controlling GPIOs
+```
+sudo pigpiod
+```
+For runnning it on startup
+```
+sudo systemctl enable pigpiod
+```
