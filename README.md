@@ -18,6 +18,8 @@ This project uses a Raspberry Pi and two servo motors to create a face-tracking 
 # Install pigpio for servo control
 sudo apt update
 sudo apt install pigpio python3-pigpio
+pip3 install RPi.GPIO
+
 
 # Install OpenCV for face detection
 pip install opencv-python opencv-python-headless
